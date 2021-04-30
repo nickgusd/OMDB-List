@@ -1,0 +1,9 @@
+.list-items {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    color: "black"
+}

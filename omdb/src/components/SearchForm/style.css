@@ -1,0 +1,15 @@
+form {
+    margin-bottom: 50px;
+}
+
+.form-control, button, label {
+    margin-top: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
