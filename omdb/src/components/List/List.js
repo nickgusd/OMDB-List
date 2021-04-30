@@ -4,8 +4,8 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import "./style.css"
 
 export default function List({ items }) {
-    let arr = []
-    const [state, setState] = useState({});
+
+    const [state, setState] = useState({ movies: items.Search });
 
     if (items.Search) {
        
@@ -56,7 +56,7 @@ export default function List({ items }) {
             }
 
             const movies = reorder(
-                items.Search,
+                state.movies,
                 result.source.index,
                 result.destination.index
             );
@@ -69,7 +69,7 @@ export default function List({ items }) {
                 <Droppable droppableId="list">
                     {provided => (
                         <div ref={provided.innerRef} {...provided.droppableProps}>
-                            <MovieList movies={items.Search} />
+                            <MovieList movies={state.movies} />
                             {provided.placeholder}
                         </div>
                     )}
@@ -78,6 +78,6 @@ export default function List({ items }) {
         )
     
     } else {
-        return <div>No Results Found</div>
+        return <div style={{textAlign: "center", marginBottom: "20px"}}>No Results Found!</div>
     }
 }

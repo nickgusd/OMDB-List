@@ -6,7 +6,7 @@ export default function SearchForm({ value, onChange, handleSubmit }) {
     return (
         <form>
         <div className="form-group">
-          <label htmlFor="search">Search:</label>
+          <label htmlFor="search"><b>OMDb Search:</b></label>
           <input
             onChange={onChange}
             value={value}
